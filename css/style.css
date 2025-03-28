@@ -10,10 +10,13 @@ html {
 	font-size: 1em;
     line-height: 1.4em;
 }
+/*
+@font-face {
+    font-family: 'badboy';
+    src: url('badBoys.ttf');
+}
 
-
-
-
+*/
 body {
 	background:#e2d2fc; /*#e62968;*/
     color:#eafcd2;
@@ -32,6 +35,9 @@ body {
 nav ul {
     list-style:none;
     padding-left:10px;
+    font-family:'badboy';
+
+
 }
 
 nav li {
@@ -89,5 +95,6 @@ footer,figcaption {
     /*font-size:10px;*/
     font-size:0.95em;
     color:#e096da;
+
     
 }
