@@ -141,8 +141,19 @@ For this media query, flex-wrap: wrap; might be helpful in your flex container, 
 /* Minimum width for desktop screens.*/
 
 @media all and (min-width: 1024px) {
+
+    main {
+        flex-wrap:nowrap;
+        justify-content: flex-start;
+    }
     
+    section {
+		flex: 1 1 50%;
+	}
     
-    
+    figure {
+        flex-basis: 20%;
+        align-content: flex-start;
+    }
     
 } /* closes 1024px+ */
