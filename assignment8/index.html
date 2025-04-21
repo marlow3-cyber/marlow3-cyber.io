@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	
+	<title>Assignment 8</title>
+	
+	<link rel="stylesheet" href="css/style.css">	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+   
+	
+</head>
+
+
+<body class="dylan">
+
+  <div id="container">
+
+
+      
+      <main>
+
+
+    <header>
+        <h1 id="abf">About My Final</h1>
+        <h1 id="nightMode">Welcome to Night Mode</h1>
+          </header>
+    
+          
+    <button id="magic1">press this to change.... everything</button>
+
+          
+          
+
+          
+   <section id="prop">    
+<p>For my final, I am going to create a website from the point of view of someone trying to prove that her brother was murdered. I’ve come up with a whole case to base this project on. A man named Peter Bonsby was found dead in his apartment, stabbed in the chest. The character who is creating the website, Anna Bonsby, is Peter’s sister. His death was ruled as a suicide, but Anna doesn’t believe that. She thinks that Peter’s girlfriend, Mary, murdered him. The fictitious truth in this case would be <b><i>Mary murdered Peter.</i></b></p>
+</section>   
+          
+  
+          
+    <figure id="logo">
+        <img src="img/webLogo.jpg" alt="Guitar with a magnifying glass">
+        <figcaption>just kidding, that button just shows you my logo!</figcaption>
+          </figure> 
+      
+          
+     <button id="theSNOW">the best surprise awaits with just one click</button>
+     
+          
+    <figure id="cuteVid">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jfd9CDbB548?si=86pyHKc0YhN6tMaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></figure>
+          
+          
+          
+          
+</main>
+
+
+
+  </div><!-- close "container" -->
+  
+    
+    <!-- Paste the jQuery starter code below here -->
+
+    <!-- Link to jQuery on Google CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+
+<script>
+    $(document).ready(function() {
+        
+        $('figure#logo').hide();
+        $('figure#cuteVid').hide();
+        $('button#theSNOW').hide();
+        $('h1#nightMode').hide();
+
+        $('button#magic1').click(function() {
+            $('figure#logo').slideToggle(500);
+            $('button#theSNOW').show(1000);
+        });//close click function
+        
+      
+        
+        
+        $('button#theSNOW').click(function() {
+            
+            $('figure#cuteVid').fadeToggle(1500);
+            $('button#theSNOW').hide(1000);
+            
+        });//close 2nd click function
+        
+        
+        
+        
+        $('h1').click(function() {
+            
+            $('h1#abf').toggle();
+            $('h1#nightMode').toggle();
+            $('body').toggleClass('dylan');
+            
+        }); //close 3rd click function
+
+  }); //close .ready()
+</script>
+
+</body>
+	
+</html> 

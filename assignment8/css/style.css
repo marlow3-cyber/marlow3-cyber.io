@@ -1,0 +1,175 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+body {
+    background:#c7a8e6;
+    color:#5c2791;
+    font-family:'Neuton';
+    font-size: 2.5em;
+    line-height:1.8em;
+}
+
+
+#container {
+	border: 2px black solid;
+    margin:10px;
+}
+
+
+main {
+    margin:10px;
+    padding:20px;
+}
+
+h1 {
+    cursor:pointer;
+    display:inline-block;
+}
+
+h1:hover {
+    color:#ff4f42;
+}
+
+h1#nightMode {
+    text-align: center;
+    margin:auto;    
+}
+
+
+.dylan {
+    background:#dff2e4;
+    color:#232624;
+    font-family:sans-serif;
+    line-height:1.4em;
+    font-size:1em;
+    
+}
+
+
+section#prop {
+    background:#f5f5f7;
+    
+}
+
+
+/*
+#theSNOW {
+ 
+}
+*/
+
+
+
+img {
+    height:190px;
+}
+
+
+figure#logo {
+    justify-items:center;
+    border: 3px dotted black;
+    
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+figure#cuteVid>iframe {
+    width:100%;
+    justify-content: center;
+    
+}
+
+
+button#theSNOW {
+    background:#e9c0eb;
+    text-align:end;
+    width:30%;
+    height:auto;
+    padding:5px;
+}
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+    #container {
+        width:725px;
+        margin:auto;
+    }	
+    
+    body {
+        background: #f2efda url(../img/stars.jpeg) fixed no-repeat center;
+        background-size:cover;
+    }
+	
+
+    
+    
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+    #container {
+        width:1000px;
+    }
+/*
+    section#prop {
+        float:left;
+        width:450px;
+        background:#cbdef7;
+    }
+    
+    figure#logo {
+        float:right;
+        width:450px;
+        
+        */
+    }
+	
+} /* closes 1024px+ */
+
+
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
