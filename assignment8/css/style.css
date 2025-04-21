@@ -20,8 +20,24 @@ body {
     background:#c7a8e6;
     color:#5c2791;
     font-family:'Neuton';
-    font-size: 2.5em;
-    line-height:1.8em;
+
+}
+
+
+p#footer {
+    font-size: 0.7em;
+    margin: 10px;
+    padding:auto;
+    text-align:center;
+    width:auto;
+    display:inline-block;
+    font-family: Impact;
+    letter-spacing: 2px;
+    background:#8a90ff;
+    
+
+    
+    
 }
 
 
@@ -54,9 +70,12 @@ h1#nightMode {
 .dylan {
     background:#dff2e4;
     color:#232624;
-    font-family:sans-serif;
     line-height:1.4em;
-    font-size:1em;
+        body {
+        background: #f2efda url(../img/stars.jpeg) fixed no-repeat center;
+        background-size:cover;
+    }
+    
     
 }
 
@@ -106,6 +125,18 @@ button#theSNOW {
     padding:5px;
 }
 
+
+    h1#nightMode {
+        font-size:4em;
+        line-height:1.4em;
+    }
+
+    body {
+        background: #f2efda url(../img/stars.jpeg) fixed no-repeat center;
+        background-size:cover;
+    }
+    
+
 /* ========================================
 MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
@@ -125,10 +156,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
         background: #f2efda url(../img/stars.jpeg) fixed no-repeat center;
         background-size:cover;
     }
-	
+    
 
-    
-    
 } /* closes 769px+ */
 
 
@@ -139,6 +168,11 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	
     #container {
         width:1000px;
+    }
+    
+    
+    p {
+        line-height: 1.4em;
     }
 /*
     section#prop {

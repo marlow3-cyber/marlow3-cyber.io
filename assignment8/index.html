@@ -42,7 +42,7 @@
 
           
    <section id="prop">    
-<p>For my final, I am going to create a website from the point of view of someone trying to prove that her brother was murdered. I’ve come up with a whole case to base this project on. A man named Peter Bonsby was found dead in his apartment, stabbed in the chest. The character who is creating the website, Anna Bonsby, is Peter’s sister. His death was ruled as a suicide, but Anna doesn’t believe that. She thinks that Peter’s girlfriend, Mary, murdered him. The fictitious truth in this case would be <b><i>Mary murdered Peter.</i></b></p>
+       <p>For my final, I am going to create a website from the point of view of someone trying to prove that her brother was murdered. I’ve come up with a whole case to base this project on. A man named Peter Bonsby was found dead in his apartment, stabbed in the chest. The character who is creating the website, Anna Bonsby, is Peter’s sister. His death was ruled as a suicide, but Anna doesn’t believe that. She thinks that Peter’s girlfriend, Mary, murdered him. The fictitious truth in this case would be <b><i>Mary murdered Peter.</i></b></p>
 </section>   
           
   
@@ -60,10 +60,12 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/jfd9CDbB548?si=86pyHKc0YhN6tMaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></figure>
           
           
-          
-          
-</main>
 
+</main>
+   <button id="credz">click here for the credits</button>   
+      <footer>
+        <p id="footer">&#169;Marlowe Shachory 2025</p>  
+      </footer>
 
 
   </div><!-- close "container" -->
@@ -82,14 +84,15 @@
         $('figure#cuteVid').hide();
         $('button#theSNOW').hide();
         $('h1#nightMode').hide();
+        $('p#footer').hide();
 
+        
         $('button#magic1').click(function() {
             $('figure#logo').slideToggle(500);
             $('button#theSNOW').show(1000);
         });//close click function
         
       
-        
         
         $('button#theSNOW').click(function() {
             
@@ -98,6 +101,17 @@
             
         });//close 2nd click function
         
+    
+
+
+        $('button#credz').click(function() {
+            
+            $('p#footer').show();
+            $('p#footer').animate({fontSize: '100px'},"slow");
+                //close animation
+            
+        }); //close 3rd click function
+
         
         
         
@@ -107,8 +121,10 @@
             $('h1#nightMode').toggle();
             $('body').toggleClass('dylan');
             
-        }); //close 3rd click function
+        }); //close 4th click function
 
+                               
+        
   }); //close .ready()
 </script>
 
