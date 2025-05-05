@@ -9,92 +9,410 @@ html {
 		/* Standard text-settings below */
 	font-size: 1em;
     line-height: 1.4em;
-}
-/*
-@font-face {
-    font-family: 'badboy';
-    src: url('badBoys.ttf');
+    
 }
 
-*/
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
+
+/*affects whole site*/
+
 body {
-	background:#e2d2fc; /*#e62968;*/
-    color:#eafcd2;
-	
+	font-family: "Special Elite";
+   /* background-image: url("webLogo.jpg");
+    background-repeat: no-repeat;*/
+}
+
+/*fix!*/
+header>marquee {
+    position:sticky;
+}
+
+
+#mopbTop {  /*header bar*/
+    font-size:3em;
+    line-height: 1em;
+    background:#9a312c;
+    text-align:center;
+    padding:20px;
+    margin:auto;
+    /*make drop shadow white/pink?*/
 }
 
 
 #container {
-	background:#609153;
-    width:90%;
-    max-width:800px;
+	/*background image*/
+    width:80%;
     margin:auto;
-    padding:20px;
 }
+
+/* making flex properties for nav bar, 
+fix the about-me & rip-peter & make sticky */
 
 nav ul {
-    list-style:none;
-    padding-left:10px;
-    font-family:'badboy';
-
-
+	list-style:none;
+	padding-left:0px;
+    display:flex;
+    flex-wrap:nowrap; 
+    /*position:sticky;*/
 }
+
 
 nav li {
-    display:inline;    
+    flex: 1 1 20%;
+    text-align:center;
 }
 
 
+nav li:hover {
+    transform: rotate(20deg);
+}
 
 
 nav a {
     color:#5d6570;
-    margin:5px;
-   /* font-family:*/
     text-decoration:none;
     font-size:1.5em;
-    display:inline-block;
     background:#f9fad9;
     padding:8px;
-    border-radius:30px;
+    margin:5px;   
 }
 
 
 nav a:hover {
     color:hotpink;
     background:#8bf56e;
+    transform: rotate(20deg); 
 }
 
-p a {
-    color:#609153;
+.text {  /*makes the text boxes*/
+    width: 90%;
+    margin:auto;
+    padding:20px;
+    border:#f0bebb solid 4px;
+    border-radius:3px;
+    background:#f5eded;
+    margin-bottom:10px;
 }
 
-p a:hover {
-    color:hotpink;
-}
-/* 
-h1,h2 {
-   font-family: 
-}
-*/
-figure {
-    margin:0px;
-    background:#705391;
-    padding:10px; 
+
+/*home page*/
+
+body#index {
+    
 }
 
-img {
+
+#logo {
+    width:80%;
+    display:block;
+    margin:auto;   
+}
+
+
+#hasttk {
+    margin:10px;
+    color:white;
+    text-align:center;
+    font-size:1.5em;
+    line-height:2em;
+    background:#9a312c;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+#video {
+    padding:5px;
+}
+
+
+#endOfHome>p {
+    width: 90%;
+    margin:auto;
+    padding:20px;
+    border:#f0bebb solid 4px;
+    border-radius:3px;
+    background:#e37474;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+
+p>a {
+    color:#b80c00;
+}
+
+p>a:hover {
+    color:#062b91;
+    background:white;
+}
+
+
+
+
+#MKP {
+    text-shadow: 0px 0px black;
+}
+
+
+
+
+
+/*about me page*/
+
+
+body#aboutMe {
+    
+}
+
+#abtMeTop {  /*header bar*/
+    font-size:3em;
+    line-height: 1em;
+    background:url(../img/ylwflowers.jpeg);
+    text-align:center;
+    padding:20px;
+    /*make drop shadow white/pink?*/
+}
+
+
+/*fix up #AB font/size/color*/
+
+#me { /*how can I put this behind some text?*/
     width:100%;
+    display:block;
+    margin:auto;
+    padding:10px;
 }
 
-#container {
+
+figcaption {
+    font-size:0.8em;
+    line-height:1.4em;
+    text-align: justify;
+}
+
+#bigText {
+    font-size: 2em;
+}
+
+
+#diagram {
+    width:400px;
+    height:500px;
+    padding:0px;
+    margin:0px;
+    border: dotted #a9c6d4 5px;
+}
+
+
+
+#babyBass {
+    width:60%;
+    float:left;
+}
+
+#bassPicCap {
+    float:right;
+    width:110px;
+    padding:2px;
+    /*how to make the caption centered?*/
+}
+
+
+
+
+
+
+/*memorial page*/
+
+body#ripPeter {
     
 }
 
-footer,figcaption {
-    /*font-size:10px;*/
-    font-size:0.95em;
-    color:#e096da;
 
+#quote { /*how to put this as the background?*/
+    width:100%
+}
+
+
+#peter {
+    display: inline-block;
+    background:#147a1a;
+    color:#f2a7b1;
+    padding:20px;
+    font-size:3.3em;
+    border-radius:18px;
+    text-align:center;
+    transform:rotate(-30deg);
+}
+
+
+#imy { /*make this a button maybe?*/
+    display: inline-block;
+    background:#e864be;
+    color:white;
+    padding:20px;
+    font-size:3.3em;
+    border-radius:10px;
+    text-align:center;
+    transform:rotate(20deg);
+    position:absolute;
+    line-height:0.7em;
     
 }
+
+#ily {
+    display: inline-block;
+    display: inline-block;
+    background:#e864be;
+    color:white;
+    padding:20px;
+    font-size:3.3em;
+    border-radius:10px;
+    text-align:center;
+    transform:rotate(-12deg);
+    line-height:0.7em;
+    
+}
+
+
+#jazzVideo {
+    border: pink 6px solid;
+    border-radius:10%;
+    float:left;
+    margin:10px;
+}
+
+
+
+#cursorCredz {
+    float:left;
+}
+
+
+
+
+
+/*MARY page*/
+
+body#mary {
+    
+}
+
+
+#maryTop {  /* how to make this the background image?*/
+    font-size:3em;
+    background-image:url(../img/mary1.JPG);
+}
+
+
+
+#maryPic {
+    width:100%;
+    position:;
+}
+
+#medText {
+    font-size:1.5em;
+}
+
+
+#planeTicket {
+    height:100px;
+    background:#cfcacb;
+    border:black 5px solid;
+}
+
+
+button#realEvents {
+    ****
+}
+
+.evidence {
+    width: 90%;
+    margin:auto;
+    padding:20px;
+    border:black solid 4px;
+    border-radius: 3px;
+    background:#8478f0;
+    margin-bottom:10px;
+}
+
+/*make evidence flex box*/
+
+/*join us page*/
+
+body#joinUs {
+    
+}
+
+body#joinUs h2#info {
+    line-height: 1em;
+    width:60%;
+    margin:auto;
+}
+
+
+body#joinUs img#merch {
+    width:330px;
+    display:block;
+    margin:auto;
+    margin-bottom:10px;
+    float:left;
+    
+}
+
+body#joinUs figcaption {
+    text-align: center;
+    display: block;
+    width:330px;
+    float:inherit;
+    
+}
+
+
+body#joinUs h2#subscribe {
+    line-height: 1em;
+}
+
+body#joinUs footer {
+    margin-top:40px;
+    height:150px;
+    text-align: center;
+    align-content: center;
+    background: url(../img/bnwMe.jpeg);
+}
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+
+
+/* Minimum width for laptops. */
+@media all and (min-width: 769px) {
+	
+	
+	
+	
+} /* closes 769px+ */
+
+
+
+
+/* Minimum width for desktop screens. */
+@media all and (min-width: 1024px) {
+	
+	/*make logo the background when it gets to a desktop*/
+	
+	
+} /* closes 1024px+ */
+
+
+
