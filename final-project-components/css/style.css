@@ -19,30 +19,36 @@ html {
 
 body {
 	font-family: "Special Elite";
-   /* background-image: url("webLogo.jpg");
-    background-repeat: no-repeat;*/
-}
-
-/*fix!*/
-header>marquee {
-    position:sticky;
 }
 
 
 #mopbTop {  /*header bar*/
     font-size:3em;
     line-height: 1em;
-    background:#9a312c;
+    background:url(bgtiles/lightning.gif);
+    color:#ffcfcf;
     text-align:center;
     padding:20px;
     margin:auto;
-    /*make drop shadow white/pink?*/
+    text-shadow:3px 3px  #383434;    
+}
+
+nav {
+    position:sticky;
+    top:10px;
+    z-index:1;
+    background:url(abheart6.gif) center, #9a312c;
+    border-radius:5px;
+    transition: transform 0.2s;
 }
 
 
+nav:hover {
+    transform: scale(1.05)
+}
+
 #container {
-	/*background image*/
-    width:80%;
+    width:90%;
     margin:auto;
 }
 
@@ -53,14 +59,16 @@ nav ul {
 	list-style:none;
 	padding-left:0px;
     display:flex;
-    flex-wrap:nowrap; 
-    /*position:sticky;*/
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    
 }
 
 
 nav li {
-    flex: 1 1 20%;
-    text-align:center;
+    flex:1 1 20%;
+    text-align: center;
 }
 
 
@@ -75,7 +83,8 @@ nav a {
     font-size:1.5em;
     background:#f9fad9;
     padding:8px;
-    margin:5px;   
+    line-height:1.1em;
+    text-align:center;
 }
 
 
@@ -85,8 +94,10 @@ nav a:hover {
     transform: rotate(20deg); 
 }
 
+
+
 .text {  /*makes the text boxes*/
-    width: 90%;
+    max-width:400px;
     margin:auto;
     padding:20px;
     border:#f0bebb solid 4px;
@@ -95,34 +106,89 @@ nav a:hover {
     margin-bottom:10px;
 }
 
+#tyFooter {
+    font-size:0.6em;
+    line-height:1.5em;
+    height:50px;
+    background:url(bgtiles/subscribe.gif) 80% center, rgb(232, 250, 225, 0.8);
+    padding:5px;
+    margin-top:10px;
+    margin-bottom: 0px;
+    align-content:center;
+}
+
+
+figcaption{
+    display:inline-block;
+}
+
+
+
 
 /*home page*/
 
 body#index {
-    
+    margin:auto;
+	background:url(webLogo.png) center repeat, url(bgtiles/plaidbackground.jpg) left top repeat;
 }
 
-
-#logo {
-    width:80%;
-    display:block;
-    margin:auto;   
+body#index .text {
+    width:380px;
 }
 
+#thecase, #maryintroduced {
+    text-align:center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#thecase {
+    transform:rotate(-10deg);
+    float:left;
+    z-index:1;
+    position:relative;
+}
+
+#maryintroduced {
+    text-indent:50px;
+    transform:rotate(10deg); 
+    float:right;
+}
 
 #hasttk {
-    margin:10px;
+    position:relative;
+    z-index:0.5;
     color:white;
+    clear:both;
     text-align:center;
     font-size:1.5em;
     line-height:2em;
-    background:#9a312c;
+    background:#000;
+    border-radius:10px
 }
 
 
-ul {
-    list-style: none;
+section#things2Know {
+    display:flex;
+    width: 420px;
+    margin:auto;
+    padding:20px;
+    flex-direction:row;
+    flex-wrap:wrap;
 }
+
+
+section#things2Know p {
+    background:white;
+    border: 3px solid black;
+    margin-bottom:10px;
+    justify-content:space-evenly;
+    text-align:center;
+    padding:10px;
+}
+
+
+
+
 
 
 #video {
@@ -137,8 +203,12 @@ ul {
     border:#f0bebb solid 4px;
     border-radius:3px;
     background:#e37474;
-    margin-bottom:10px;
     text-align: center;
+}
+
+#video {
+    width:100%;
+    margin:auto;
 }
 
 
@@ -152,42 +222,55 @@ p>a:hover {
 }
 
 
-
-
 #MKP {
     text-shadow: 0px 0px black;
+    font-size:1.7em;
 }
-
-
-
 
 
 /*about me page*/
 
 
 body#aboutMe {
-    
+    background: url(../img/me.png) round;
+}
+
+body#aboutMe nav {
+    z-index:2;
 }
 
 #abtMeTop {  /*header bar*/
     font-size:3em;
     line-height: 1em;
-    background:url(../img/ylwflowers.jpeg);
     text-align:center;
     padding:20px;
-    /*make drop shadow white/pink?*/
+    background:rgb(255, 191, 191, 0.9);
+    border-radius:50%
 }
 
 
-/*fix up #AB font/size/color*/
 
-#me { /*how can I put this behind some text?*/
-    width:100%;
-    display:block;
-    margin:auto;
-    padding:10px;
+
+body#aboutMe p:not(.text) {
+    background:white;
+    display:inline;
+    line-height: 1.5em;
+    border:#fadb6f solid 1px;
+    padding:3.5px;
+    position:relative;
+    z-index:1;
 }
 
+
+#aB{
+    font-size:3em;
+    margin:auto;  
+}
+
+#welcome {
+    transform:rotate(3deg);
+    z-index:-1;
+}
 
 figcaption {
     font-size:0.8em;
@@ -197,32 +280,141 @@ figcaption {
 
 #bigText {
     font-size: 2em;
+    line-height:1em;
+
+}
+
+#medText {
+    font-size:1.5em;
+}
+
+#baseball {
+    font-family:"Special Elite";
+    padding:10px;
+    margin:5px;
+    font-size:1em;
+    background:url(bgtiles/subscribe.gif) center, deeppink;
+    color:#ccc;
+    text-shadow: 1px 1px white;
+    cursor:pointer;
 }
 
 
-#diagram {
-    width:400px;
-    height:500px;
-    padding:0px;
-    margin:0px;
-    border: dotted #a9c6d4 5px;
+.bbCard {
+    display:none;
+    margin: 10px;
+    padding:6px;
+    border:black dashed 2px;
+    border-radius:30px;
+  }
+
+.bbCard img{
+    width:100%;
+    border-radius:10px;
+}
+
+
+/*for jquery reviews button*/
+#reviews figure{
+    display:none;
+}
+#reviews .active {
+    display:block;
+}
+
+
+/*parent element for reviews*/
+#reviews {
+    background:lightblue;
+    padding:20px;
+    margin-top:20px;
+    margin-bottom:60px;  
+    
+    /*flex box*/
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#qrTitle{
+    text-align:center;
+    font-size:1.24em;
+}
+
+#reviews button {
+    width:100px;
+    padding:10px;
+    border-radius: 10px;
+    color:white;
+    background:url(bgtiles/subscribe.gif)30%, black;
+    position:sticky;
+    top:0;
+}
+
+
+#reviews img {
+    width:370px;
 }
 
 
 
-#babyBass {
-    width:60%;
-    float:left;
+#reviews .text {
+    font-size:0.7em;
 }
 
-#bassPicCap {
-    float:right;
-    width:110px;
-    padding:2px;
-    /*how to make the caption centered?*/
+/*make different color for ratings*/
+
+
+
+/*gallery flex properties*/
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    grid-gap:16px;
+    max-height:500px;
+    max-width: 500px;
+    margin:auto;
+    margin-bottom:100px;
 }
 
+.gallery figure{
+    border:solid #ffdee8 2px;
+    
+    flex:1 1 calc(50% - 32px);
+    margin:0;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    background:rgba(212, 12, 134, 0.3);
+    transition:transform 0.4s;
+}
 
+.gallery figure:hover {
+    transform:scale(1.35);
+    z-index:1;
+}
+
+.gallery img {
+    width:100%;
+    display:block;
+}
+
+.gallery video {
+    max-width:100%;
+    display:block;
+    transition: fransform 0.2s;
+}
+
+.gallery figcaption {
+    padding:8px 12px;
+    font-size:0.5em;
+    color:#333;
+    text-align:center;
+}
 
 
 
@@ -230,161 +422,429 @@ figcaption {
 /*memorial page*/
 
 body#ripPeter {
-    
+    background-image:url(bgtiles/heartbackground.gif);
+    overflow:visible;
 }
 
 
-#quote { /*how to put this as the background?*/
-    width:100%
+body#ripPeter #mopbTop{
+    margin-top:50px;
+    background:none;
+    font-size:4em;
+    color:#eda1a1 black,;
+    text-shadow:2px;
 }
 
 
+#quote {
+    display:none;
+}
+
+
+/*stickers*/
 #peter {
     display: inline-block;
-    background:#147a1a;
+    position:relative;
+    top:300px;
+    left:-20px;
+    z-index:2;
+    
+
+    background:rgba(20, 122, 27, 0.85);
     color:#f2a7b1;
+    border-radius:18px;
     padding:20px;
     font-size:3.3em;
-    border-radius:18px;
-    text-align:center;
+    
     transform:rotate(-30deg);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
 }
-
-
-#imy { /*make this a button maybe?*/
+#rip {
     display: inline-block;
+    position:absolute;
+    bottom:-400px;
+    left:-20px;
+    z-index:2;
+
+    background:rgba(0, 0, 0, 0.85);
+    color:#f2a7b0;
+    border-radius:18px;
+    padding:20px;
+    font-size:3.3em;
+    
+    transform:rotate(20deg);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
+#rip2 {
+    display: inline-block;
+    position:relative;
+    top:1500px;
+    right:-220px;
+    z-index:2;
+
+    background:rgba(0, 0, 0, 0.85);
+    color:#f2a7b0;
+    border-radius:18px;
+    padding:20px;
+    font-size:3.3em;
+    
+    transform:rotate(20deg);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
+#rip3 {
+    display: inline-block;
+    position:absolute;
+    top:1700px;
+    left:-20px;
+    z-index:2;
+
+    background:rgba(0, 0, 0, 0.85);
+    color:#f2a7b0;
+    border-radius:18px;
+    padding:20px;
+    font-size:3.3em;
+    
+    transform:rotate(-20deg);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
+#imy1 {
+    display: inline-block;
+    position:absolute;
+    top:300px;
+    right:-80px;
+    z-index:2;
+    
+    
     background:#e864be;
+    opacity:0.8;
     color:white;
     padding:20px;
     font-size:3.3em;
     border-radius:10px;
     text-align:center;
     transform:rotate(20deg);
-    position:absolute;
     line-height:0.7em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     
 }
-
-#ily {
+#imy2 {
     display: inline-block;
-    display: inline-block;
+    position:relative;
+    bottom:-1000px;
+    left:-180px;
+    z-index:2;
+    
+    
     background:#e864be;
+    opacity:0.8;
     color:white;
     padding:20px;
     font-size:3.3em;
     border-radius:10px;
     text-align:center;
-    transform:rotate(-12deg);
+    transform:rotate(-20deg);
     line-height:0.7em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     
 }
-
-
-#jazzVideo {
-    border: pink 6px solid;
-    border-radius:10%;
-    float:left;
-    margin:10px;
+#ily {
+    display: inline-block;
+    position:absolute;
+    bottom:-100px;
+    right:90px;
+    z-index:2;
+    
+    background:#e197f0;
+    color:#3e004a;
+    width:100px;
+    height:100px;
+    padding:20px;
+    border-radius:50%;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    
+    font-size:2em;
+    text-align:center;
+    align-content: center;
+    transform:rotate(-12deg);
+}
+#ily2 {
+    display: inline-block;
+    position:absolute;
+    top:300px;
+    left:-20px;
+    z-index:2;
+    
+    background:#a6a2f2;
+    color:#3e004a;
+    width:300px;
+    height:100px;
+    padding:20px;
+    border-radius:50%;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    
+    font-size:2em;
+    text-align:center;
+    align-content: center;
+    transform:rotate(-12deg);
 }
 
-
-
-#cursorCredz {
-    float:left;
+/*kaiGallery flex properties*/
+.kaiGallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    grid-gap:16px;
+    max-width: 400px;
+    margin:auto;
+    margin-bottom:100px;
 }
 
+.kaiGallery figure{
+    border:solid #ffdee8 2px;
+    
+    flex:1 1 100%;
+    margin:0;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    background:rgba(212, 12, 134, 0.3);
+    transition:transform 0.4s;
+}
 
+.kaiGallery figure:hover {
+    transform:scale(1.05);
+}
+
+.kaiGallery img {
+    width:100%;
+    display:block;
+}
+
+.kaiGallery video {
+    max-width:100%;
+    display:block;
+    transition: fransform 0.2s;
+}
+
+.kaiGallery figcaption {
+    padding:8px 12px;
+    font-size:0.5em;
+    color:#333;
+    text-align:center;
+}
+
+body#ripPeter footer {
+    height:85px;
+}
 
 
 
 /*MARY page*/
 
 body#mary {
-    
+    background:url(bgtiles/redskulls.jpg);
+}
+
+body#mary p:not(.text, .evidence) {
+    background:white;
+    display:inline-block;
+    padding:10px;
+    border-radius:30%;
+    border:black dotted 4px;
 }
 
 
-#maryTop {  /* how to make this the background image?*/
-    font-size:3em;
-    background-image:url(../img/mary1.JPG);
-}
-
-
-
-#maryPic {
+.maryImg {
+    background: url(../img/mary1.JPG) no-repeat center; 
+    background-size:cover;
     width:100%;
-    position:;
+    height:400px;
+    position: relative;
+    top:-100px
 }
 
-#medText {
-    font-size:1.5em;
+
+
+#maryTop {
+    font-size:10em;
+    position: sticky;
+    top: 200px;
 }
+
 
 
 #planeTicket {
     height:100px;
+    width:350px;
     background:#cfcacb;
     border:black 5px solid;
 }
 
 
-button#realEvents {
-    ****
+#seqOfEvents {
+    background:url(bgtiles/whte.jpg);
+    padding:2px;
+    display:flex;
+    flex-direction:column;    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    margin:auto;
 }
+
+button#realEvents {
+    width:200px;
+    padding:10px;
+    font-family: "Bitter";
+    border-radius: 10px;
+    color:white;
+    background:url(bgtiles/blkbg.jpg);
+    position:sticky;
+    top:0;
+
+}
+
+#hugeTells {
+    display:flex;
+    flex-flow: column;
+    justify-content:center;
+    
+    box-shadow: rgba(255,25, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#hugeTells>h2 {
+    background:white;
+    width:80px; 
+    padding:8px;
+    border-radius:2px;
+    margin-bottom:0;
+    margin-top:30px;
+}
+
+#evButton {
+    width:200px;
+    padding:10px;
+    font-family: "Special Elite";
+    font-size:3em;
+    border-radius: 10px;
+    color:white;
+    background:url(bgtiles/blkbg.jpg);
+    align-self: center;
+    
+    
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    
+}
+
 
 .evidence {
     width: 90%;
     margin:auto;
     padding:20px;
-    border:black solid 4px;
+    border:#011203 solid 4px;
+    justify-content: center;
     border-radius: 3px;
-    background:#8478f0;
-    margin-bottom:10px;
+    background:#fff2f2;
+    margin-bottom:20px;
+    
+    
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 2px 0px;
 }
+
+
+
+
 
 /*make evidence flex box*/
 
 /*join us page*/
 
-body#joinUs {
+body#joinUs img#web {
+    z-index:-2;
+    position:fixed;
+    
+}
+
+body#joinUs #mopbTop {
+    background: url(bgtiles/starsrbowbg.gif)
+}
+
+body#joinUs video{
+    margin-top:50px;
+    width:100%;
+}
+
+.anyInfo {
+    display:flex;
+    background:rgb(255,255,255,0.8);
     
 }
 
 body#joinUs h2#info {
     line-height: 1em;
-    width:60%;
-    margin:auto;
+    max-width:300px;
+    
+   
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+    text-align: center;
+
+    box-shadow: rgba(255, 66, 202, 0.56) 0px 22px 70px 4px;
+}
+
+.anyInfo form {
+    padding:10px;
+    box-shadow: rgba(38, 76, 209, 0.56) 0px 22px 70px 4px;
+    border-radius:10px;
+}
+
+.anyInfo textarea {
+    height:200px;
+    width:280px;
 }
 
 
-body#joinUs img#merch {
+
+#merch {
     width:330px;
     display:block;
     margin:auto;
     margin-bottom:10px;
-    float:left;
-    
 }
 
-body#joinUs figcaption {
+#merchCap {
     text-align: center;
     display: block;
     width:330px;
-    float:inherit;
-    
+    margin:auto;
+    padding:3px;
+    background:url(abheart6.gif), rgb(242, 29, 125, 0.5);
+    border-radius:5px;
+}
+
+body#joinUs figure:hover {
+    transform:scale(1.03);
 }
 
 
-body#joinUs h2#subscribe {
-    line-height: 1em;
+
+
+#subscribeHere {
+    width:200px;
+    background:url(bgtiles/subscribe.gif), #f0b1cd;
+    border:5px solid #0afa36;
+    padding:5px;
+    margin:auto;
+    position:fixed;
+    z-index:2;
+    top:100px;
+    right:0px;  
 }
 
-body#joinUs footer {
-    margin-top:40px;
-    height:150px;
-    text-align: center;
-    align-content: center;
-    background: url(../img/bnwMe.jpeg);
+#subSub {
+    background:blue;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 
@@ -398,9 +858,79 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for laptops. */
 @media all and (min-width: 769px) {
 	
-	
-	
-	
+
+    section#things2Know {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            grid-gap: 20px;
+            margin: 40px;
+        }   
+
+     section#things2Know p {
+            flex: 1 1 calc(33% - 40px);
+            background: #fff;
+            border: 2px solid #222;
+            padding: 20px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
+
+
+
+    #hasttk {
+            font-size: 2em;
+            margin-top: 60px;
+        }
+
+
+    #endOfHome {
+            max-width: 490px;
+            float:left;
+            margin:20px;
+        }
+
+
+    body#index video {
+        float:right;    
+        max-height: 500px;
+        max-width:400px;
+        margin:40px;
+        }
+
+
+        footer {
+            clear:both;
+        }
+    
+    body#aboutMe p:not(.text){
+        max-width:500px;
+    }
+    
+    
+    
+    body#aboutMe #container {
+        max-width:600px;
+    }
+
+    
+    #diagram>img {
+        max-width:450px;
+    }
+    
+    body#joinUs video {
+        max-width:400px;
+    }
+    
+     body#joinUs #web {
+        display:none;
+    }
+    
+    body#joinUs {
+        background:url(webLogo.png) center repeat;
+    }
 } /* closes 769px+ */
 
 
@@ -411,7 +941,95 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	
 	/*make logo the background when it gets to a desktop*/
 	
-	
+    body#aboutMe #container {
+        max-width:900px;
+        margin:auto;
+    }
+    
+    body#aboutMe p:not(.text){
+        max-width:500px;
+    }
+    
+    body#aboutMe #reviews {
+        width:80%;
+        margin:auto;
+    }
+    
+    
+    body#aboutMe {
+        background: url(webLogo.png) center repeat, url(../img/me.png) round;
+    }
+    
+    
+    body#aboutMe #wholeABTME{
+        background:rgb(255,255,255, 0.8);
+        padding:20px;
+        margin:auto;
+        
+    }
+    
+   
+    body#ripPeter {
+        background: url(webLogo.png) center repeat, url(bgtiles/heartbackground.gif);
+    }
+    
+    
+    #quote {
+        display:block;
+    }
+
+    
+    #quote img{
+        opacity:0.7;
+        width:70%;
+        margin:100px;
+        
+    }
+    
+    
+    #reviews figure>img,  #reviews figure>figcaption {
+        margin-left:0px;
+    }
+    
+    #bookrev {
+        margin-right: 0px;
+    }
+    
+    
+    #diagram>img {
+        max-width:450px;
+    }
+    
+    
+    body#mary #seqOfEvents {
+        background:url(webLogo.png) center repeat, url(bgtiles/whte.jpg);
+    }
+    
+    
+    body#joinUs {
+        background:url(webLogo.png) center repeat;
+    }
+    
+   body#joinUs #merch{
+       position:absolute;
+       top:350px;
+       right:70px;
+       width:400px;
+       
+    }
+    
+    body#joinUs figure:hover {
+    transform:none;
+}
+    
+    #merchCap {
+        position:relative;
+        bottom:140px;
+        left:365px;
+
+    }
+    
+    
 } /* closes 1024px+ */
 
 
