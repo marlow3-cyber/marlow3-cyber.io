@@ -306,6 +306,8 @@ figcaption {
     padding:6px;
     border:black dashed 2px;
     border-radius:30px;
+    width:80%;
+    margin:auto;
   }
 
 .bbCard img{
@@ -889,7 +891,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
     #endOfHome {
             max-width: 490px;
             float:left;
-            margin:20px;
+            margin:auto;
+        margin-bottom:5px;
         }
 
 
@@ -897,8 +900,13 @@ You can adjust the min-width numbers below, and add as many new media queries as
         float:right;    
         max-height: 500px;
         max-width:400px;
-        margin:40px;
-        }
+        margin:auto;
+        margin-bottom:5px;
+        padding:0px;
+    }
+    body#index figcaption {
+        display:none;
+    }
 
 
         footer {
@@ -987,9 +995,34 @@ You can adjust the min-width numbers below, and add as many new media queries as
     }
     
     
+    
+    .bbCard {
+        display:none;
+        margin: 10px;
+        padding:6px;
+        border:black dashed 2px;
+        border-radius:30px;
+        width:50%;
+        margin:auto;
+    }
+
+    
+    .bbCard img{
+        width:100%;
+        border-radius:10px;
+    } 
+    
+    
+    
+    
+    
     #reviews figure>img,  #reviews figure>figcaption {
         margin-left:0px;
     }
+    
+    
+    
+    
     
     #bookrev {
         margin-right: 0px;
