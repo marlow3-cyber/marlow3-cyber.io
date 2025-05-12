@@ -27,34 +27,30 @@
 <body id="mary">
 
   <div id="container">
-  <!--   
-      <figure>
-            <img id="maryPic" src="img/mary1.JPG">
-      </figure> --> 
-      
-    <header>
-        <h1 id="maryTop">MARY</h1>
+
+   <div class="maryImg">
+          <header>
+              <h1 id="maryTop">MARY</h1>
 <!--would be super cool to have the title type out like "MARY is a KILLER"-->
-        <marquee behavior=scroll direction="left">THE TRUTH ABOUT MARY</marquee>
-      </header>
+              <marquee behavior=scroll direction="left">THE TRUTH ABOUT MARY</marquee>
+          </header>
  
-    
-      <nav id="navBar">
-        <ul> 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutMe.html">About Me</a></li>
-            <li><a href="ripPeter.html">RIP Peter</a></li>
-            <li><a href="maryAKiller.html">MARY</a></li>
-            <li><a href="join.html">Join!</a></li>
-        </ul>
-      </nav>
+    <br><br><br><br> <br><br><br>
+          <nav id="navBar">
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="ripPeter.html">RIP Peter</a></li>
+                <li><a href="maryAKiller.html">MARY</a></li>
+                <li><a href="join.html">Join!</a></li>
+            </ul>
+          </nav>
+</div>
+     
 
       
       
-      <p id="medText">on this page, i need a picture of sab as the background, a fake plane ticket, all the deets of the case</p>
-      
-      
-      <p class="text">Her “alibi” story: she claims to have been in the shower when she heard Peter scream and then ran out to see him with a knife sticking out of his chest, blood everywhere. She was “so shocked that all her training flew out the window” and she “couldn’t think of what to do” so she pulled the knife out of his chest</p>
+      <p class="text"><i id="medText">Her “alibi”</i>: she claims to have been in the shower when she heard Peter scream and then ran out to see him with a knife sticking out of his chest, blood everywhere. She was “so shocked that all her training flew out the window” and she “couldn’t think of what to do” so she pulled the knife out of his chest</p>
 
       
       
@@ -63,58 +59,125 @@
           <source src="****" type="****">
       </audio>
       
-      
-      <h1>Sequence of Events</h1>
-      <h2>What happened the days leading up to his death</h2>
+      <section id="seqOfEvents">
+      <h1><b id="medText">Sequence of Events</b><br><br>
+      What happened the days leading up to his death?</h1>
       
       <button id="realEvents">Click here to reveal her true timeline of the day</button>
+          
             <!-- jquery: cross out the original sequence of events and give a new timeline-->
       
-      <section id="seqOfEvents">
-      <p><b id="bigText">March 17</b></p>
-      <p class="text"></p>
-      <p><b id="bigText">March 19</b></p>
-      <p><b id="medText">5am-2pm</b></p>
-      <p class="text">Mary at work</p>
-      <p><b id="medText">3pm</b></p>
-      <p class="text">Mary gets to Pete's apartment</p>
-      <p><b id="medText">3:37pm</b></p>
-      <p class="text">call to 911 is placed requesting an ambulance for Peter</p>
-      
-      
-      <figure id="planeTicket"><p>***plane ticket***</p></figure>
+          <section id="firstTimeline">
+              <p><b id="bigText">March 17</b></p>
+              <p class="text"></p>
+              <p><b id="bigText">March 19</b></p>
+              <p><b id="medText">5am-2pm</b></p>
+              <p class="text">Mary at work</p>
+              <p><b id="medText">3pm</b></p>
+              <p class="text">Mary gets to Pete's apartment</p>
+              <p><b id="medText">3:37pm</b></p>
+              <p class="text">call to 911 is placed requesting an ambulance for Peter</p>
+              
+              </section>
+          
+ 
+          <section id="revealedTimes">
+              <p><b id="bigText" class="guiltyTimes">date</b></p>
+              <p class="text" "guiltyTimes">what happened</p>
+              <p><b id="bigText" class="guiltyTimes">date</b></p>
+              <p><b id="medText" class="guiltyTimes">time</b></p>
+              <p class="text" "guiltyTimes">what happened</p>
+              <p><b id="medText" class="guiltyTimes">time</b></p>
+              <p class="text" "guiltyTimes">what happened</p>
+              <p><b id="medText" class="guiltyTimes">3:37</b></p>
+              <p class="text" "guiltyTimes">call to 911 is placed requesting an ambulance for Peter</p>
+              
+              </section>
+          
+            <figure id="planeTicket"><p>***plane ticket***</p></figure>
+          
      </section>
       
-      
-      
+   
       <section id="hugeTells">
           <!-- jquery: button show each piece of evidence-->
          
-          <H2>(MORE)</H2>
+          <h2>(MORE)</h2>
+               <button id="evButton">HUGE TELLS</button>
+          <br>
+          <p class="evidence" id="ht1"><b>#1</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
           
-          <button id="evButton">HUGE TELLS</button>
+          <p class="evidence" id="ht2"><b>#2</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
           
-          <p><b id="bigText">#1</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#2</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#3</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#4</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#5</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#6</b></p>
-          <p class="evidence"></p>
-          <p><b id="bigText">#7</b></p>
-          <p class="evidence"></p>
+          <p class="evidence" id="ht3"><b>#3</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
           
-      
+          <p class="evidence" id="ht4"><b>#4</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
+          
+          <p class="evidence" id="ht5"><b>#5</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
+          
+          <p class="evidence" id="ht6"><b>#6</b><br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat </p>
       
       </section>
+      
+      
+      <footer>******************************</footer>
 
   </div><!-- close "container" -->
   
+    <footer id="tyFooter">All media shown on this website is from my personal archives, thank you mom for helping me find these videos and pictures of me and peter in such short notice</footer>
+    
+    
+    <!-- Link to jQuery on Google CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+
+    <script>
+        $(document).ready(function() {
+            //hides hugetells evidence
+            $('p#ht1').hide();
+            $('p#ht2').hide();
+            $('p#ht3').hide();
+            $('p#ht4').hide();
+            $('p#ht5').hide();
+            $('p#ht6').hide();
+            
+            
+            //hides revealedTimes section
+            $('section#revealedTimes').hide();
+            
+
+     //makes a button to show each piece of evidence on click
+            let index = 0;
+            const evidence = $("section#hugeTells>p");
+            
+            $('#evButton').on("click", function() {
+                
+                if (index < evidence.length) {
+                    
+                    $(evidence[index]).slideDown("slow");
+                        index++;
+                };//close if statement 
+                
+        });//close 1st click function
+            
+            
+            //button to reveal Mary's true timeline
+            $('#realEvents').click(function(){
+                $('section#revealedTimes').fadeToggle(2000);
+                $('section#firstTimeline').fadeToggle(1000);
+                
+                
+                //okno ****** must figure out how to replace it... but thats cosmetic and not insanely important
+                
+            })
+            
+            
+            
+            
+        }); //close .ready()
+    </script>
+    
+    
 
 </body>
 	
