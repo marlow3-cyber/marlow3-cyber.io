@@ -674,15 +674,6 @@ body#mary p:not(.text, .evidence) {
 }
 
 
-
-#planeTicket {
-    height:100px;
-    width:350px;
-    background:#cfcacb;
-    border:black 5px solid;
-}
-
-
 #seqOfEvents {
     background:url(bgtiles/whte.jpg);
     padding:2px;
@@ -700,11 +691,17 @@ button#realEvents {
     font-family: "Bitter";
     border-radius: 10px;
     color:white;
+    
     background:url(bgtiles/blkbg.jpg);
     position:sticky;
     top:0;
 
 }
+
+button#realEvents:hover {
+    transform:scale(1.05)
+}
+
 
 #hugeTells {
     display:flex;
@@ -738,6 +735,9 @@ button#realEvents {
     
 }
 
+#evButton:hover {
+    transform:scale(1.05)
+}
 
 .evidence {
     width: 90%;
